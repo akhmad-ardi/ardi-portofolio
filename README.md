@@ -61,17 +61,14 @@
 
 <h4> Connect with me🤝: <h4>
   </hr>
-  <a href="https://www.linkedin.com/in/yousranmz/">
-   <img align="left" alt="Akhmad Ardiansyah Amnur | Linkedin" width="24px" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" />
-  </a>
-  <a href="mailto:yusranmazidan@gmail.com">
+  <a href="mailto:akhmad.ardi1711@gmail.com">
     <img align="left" alt="Akhmad Ardiansyah Amnur | Gmail" width="26px" src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" />
   </a>
-  <a href="https://www.instagram.com/yousran_mz/">
+  <a href="https://www.instagram.com/ardi.17__/">
     <img align="left" alt="Akhmad Ardiansyah Amnur | Instagram" width="24px" src="https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg" />
   </a>
   </a>
-   <a href="https://github.com/Yousran">
+   <a href="https://github.com/akhmad-ardi">
     <img align="left" alt="Akhmad Ardiansyah Amnur | Github" width="26px" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" />
   </a>
   <br>
