@@ -6,7 +6,6 @@
 <h3>Little facts about me 👤</h3>
 
 - 🔭 I’m currently studying as college student
-- 👯 I’m looking to collaborate with Fullstack Web.
 <br>
 
 ---
