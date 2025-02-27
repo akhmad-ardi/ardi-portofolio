@@ -221,7 +221,7 @@
 
 		/* submit via ajax */
 		submitHandler: function(form) {
-			const url = "http://localhost:3000/api/message";
+			const url = "https://ardi-portoflio-be.vercel.app/api/message";
 			var sLoader = $('#submit-loader');
 
 			const name = $("#name")
