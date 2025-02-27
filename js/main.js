@@ -221,41 +221,48 @@
 
 		/* submit via ajax */
 		submitHandler: function(form) {
-
+			const url = "http://localhost:3000/api/message";
 			var sLoader = $('#submit-loader');
+
+			const name = $("#name")
+			const email = $("#email")
+			const subject = $("#subject")
+			const message = $("#message")
+
+			const data = {
+				name: name.val(),
+				email: email.val(),
+				subject: subject.val(),
+				message: message.val()
+			}
 
 			$.ajax({      	
 
 		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
+		      url: url,
+		      data: JSON.stringify(data),
 		      beforeSend: function() { 
 
 		      	sLoader.fadeIn(); 
 
 		      },
-		      success: function(msg) {
-
+		      success: function(res, textStatus, xhr) {
+				console.log("Success", xhr.status)
 	            // Message was sent
-	            if (msg == 'OK') {
+	            if (xhr.status == 201) {
 	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
+	               	$('#message-warning').hide();
+	               	$('#contactForm').fadeOut();
+	               	$('#message-success').fadeIn();   
 	            }
 
 		      },
-		      error: function() {
+		      error: function(res) {
 
+				console.log("Error", res.responseJSON.errors)
 		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
+		      	$('#message-warning').html(`${res.responseJSON.errors[0].path}: ${res.responseJSON.errors[0].message}`);
+		        $('#message-warning').fadeIn();
 
 		      }
 
@@ -287,5 +294,4 @@
 		}		
 
 	});
-
 })(jQuery);
